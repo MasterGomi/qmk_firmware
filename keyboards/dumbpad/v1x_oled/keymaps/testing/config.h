@@ -18,11 +18,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COLS 5
 
 #define MATRIX_ROW_PINS { F4, F5, F6, F7 }
-#define MATRIX_COL_PINS { C6, D7, E6, B4, B5 }
+#define MATRIX_COL_PINS { C6, B1, B3, B2, B6 }
+#define UNUSED_PINS
 
 /* Dual rotary encoders */
-#define ENCODERS_PAD_A { B2, D0 }
-#define ENCODERS_PAD_B { D4, D1 }
+#define ENCODERS_PAD_A { B4, E6 }
+#define ENCODERS_PAD_B { B5, D7 }
+#define ENCODER_DIRECTION_FLIP
 
 /* Column/Row IO definitions */
 #define DIODE_DIRECTION COL2ROW
@@ -32,7 +34,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Reduce tapdance required taps from 5 to 2 */
 #define TAPPING_TOGGLE 2
-
-
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET // Activates the double-tap behavior
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
